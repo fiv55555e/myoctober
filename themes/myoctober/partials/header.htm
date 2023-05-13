@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ 'assets/css/main.css'|theme }}">
+    {% styles %}
+</head>
+<body>
+    <header>
+        <h1>公司管理系统</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/contact">Contact</a></li>
+                {% if user %}
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>

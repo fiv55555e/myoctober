@@ -1,0 +1,49 @@
+url = "/company/:id"
+layout = "default"
+title = "Company single"
+
+[builderDetails]
+modelClass = "Watchlearn\Company\Models\Company"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "记录未找到"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<ul class="record-list">
+  <table>
+    <thead>
+        <tr>
+            <th>公司名称</th>
+            <th>公司地址</th>
+            <th>公司账号</th>
+            <th>公司密码</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if record  %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.address }}</td>
+                <td>{{ record.username }}</td>
+                <td>{{ record.password }}</td>
+            </tr>
+        {% else %}
+            {{ noRecordsMessage }}
+        {% endif %}
+    </tbody>
+  </table>
+</ul>
+
+<div style="display: flex; justify-content: center;">
+  <button onclick="goBack()">返回上一页</button>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

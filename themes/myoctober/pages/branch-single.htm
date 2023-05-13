@@ -1,0 +1,46 @@
+url = "/branch/:id"
+layout = "default"
+title = "Branch single"
+
+[builderDetails]
+modelClass = "Watchlearn\Company\Models\Branch"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "记录未找到"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+<ul class="record-list">
+<table>
+  <thead>
+      <tr>
+          <th>分店名称</th>
+          <th>所属公司</th>
+          <th>分店地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      {% if record  %}
+          <tr>
+              <td>{{ record.name }}</td>
+              <td>{{ record.company.name }}</td>
+              <td>{{ record.address }}</td>
+          </tr>
+      {% else %}
+          {{ noRecordsMessage }}
+      {% endif %}
+  </tbody>
+</table>
+</ul>
+
+<div style="display: flex; justify-content: center;">
+  <button onclick="goBack()">返回上一页</button>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

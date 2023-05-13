@@ -1,0 +1,28 @@
+plugin:
+    name: 'watchlearn.company::lang.plugin.name'
+    description: 'watchlearn.company::lang.plugin.description'
+    author: watchlearn
+    icon: oc-icon-user
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Company
+        url: /
+        icon: icon-user
+        sideMenu:
+            side-menu-item:
+                label: Company
+                url: /watchlearn/company/company
+                icon: icon-sitemap
+            side-menu-item2:
+                label: Branch
+                url: /watchlearn/company/branch
+                icon: icon-sitemap
+            side-menu-item3:
+                label: Ledger
+                url: /watchlearn/company/ledger
+                icon: icon-sitemap
+            side-menu-item4:
+                label: Clerk
+                url: /watchlearn/company/clerk
+                icon: icon-sitemap

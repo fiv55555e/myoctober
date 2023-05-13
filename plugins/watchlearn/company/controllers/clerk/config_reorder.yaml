@@ -1,0 +1,4 @@
+title: Clerk
+modelClass: Watchlearn\Company\Models\Clerk
+toolbar:
+    buttons: reorder_toolbar

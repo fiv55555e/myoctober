@@ -1,0 +1,31 @@
+fields:
+    order:
+        label: Order
+        span: auto
+        type: text
+    amount:
+        label: Amount
+        span: auto
+        type: number
+    company:
+        label: Company
+        nameFrom: company_id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation
+    branch:
+        label: Branch
+        nameFrom: branch_id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation
+    wallet:
+        label: Wallet
+        span: auto
+        type: text
+    details:
+        label: Details
+        span: auto
+        type: text

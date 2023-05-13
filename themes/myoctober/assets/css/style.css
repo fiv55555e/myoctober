@@ -1,0 +1,78 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+nav li {
+    margin-left: 20px;
+}
+  
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.record-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 50px;
+    border: 2px solid #ccc;
+}
+  
+th,
+td {
+    padding: 10px;
+    border: 2px solid #ccc; 
+}
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+ul.pagination li {
+    margin: 0 5px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* 可以根据需要设置高度 */
+}
+
+
+  

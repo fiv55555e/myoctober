@@ -1,0 +1,10 @@
+name: Company
+form: $/watchlearn/company/models/company/fields.yaml
+modelClass: Watchlearn\Company\Models\Company
+defaultRedirect: watchlearn/company/company
+create:
+    redirect: 'watchlearn/company/company/update/:id'
+    redirectClose: watchlearn/company/company
+update:
+    redirect: watchlearn/company/company
+    redirectClose: watchlearn/company/company

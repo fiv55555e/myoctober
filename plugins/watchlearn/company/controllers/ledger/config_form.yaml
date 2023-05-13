@@ -1,0 +1,10 @@
+name: Ledger
+form: $/watchlearn/company/models/ledger/fields.yaml
+modelClass: Watchlearn\Company\Models\Ledger
+defaultRedirect: watchlearn/company/ledger
+create:
+    redirect: 'watchlearn/company/ledger/update/:id'
+    redirectClose: watchlearn/company/ledger
+update:
+    redirect: watchlearn/company/ledger
+    redirectClose: watchlearn/company/ledger

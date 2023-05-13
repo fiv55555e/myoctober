@@ -1,0 +1,55 @@
+url = "/ledger/:id"
+layout = "default"
+title = "Ledger single"
+
+[builderDetails]
+modelClass = "Watchlearn\Company\Models\Ledger"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "order"
+notFoundMessage = "记录未找到"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<ul class="record-list">
+  <table>
+    <thead>
+        <tr>
+            <th>订单编号</th>
+            <th>所属公司</th>
+            <th>所属分店</th>
+            <th>订单金额</th>
+            <th>钱包地址</th>
+            <th>订单详情</th>
+            <th>订单时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if record  %}
+            <tr>
+                <td>{{ record.order }}</td>
+                <td>{{ record.company.name }}</td>
+                <td>{{ record.branch.name }}</td>
+                <td>{{ record.amount }}</td>
+                <td>{{ record.wallet }}</td>
+                <td>{{ record.details }}</td>
+                <td>{{ record.created_at }}</td>
+            </tr>
+        {% else %}
+            {{ noRecordsMessage }}
+        {% endif %}
+    </tbody>
+  </table>
+</ul>
+
+<div style="display: flex; justify-content: center;">
+  <button onclick="goBack()">返回上一页</button>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

@@ -1,0 +1,10 @@
+name: Branch
+form: $/watchlearn/company/models/branch/fields.yaml
+modelClass: Watchlearn\Company\Models\Branch
+defaultRedirect: watchlearn/company/branch
+create:
+    redirect: 'watchlearn/company/branch/update/:id'
+    redirectClose: watchlearn/company/branch
+update:
+    redirect: watchlearn/company/branch
+    redirectClose: watchlearn/company/branch

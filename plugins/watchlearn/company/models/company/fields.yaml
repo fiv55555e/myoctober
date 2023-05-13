@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: Name
+        span: left
+        type: text
+    address:
+        label: Address
+        span: right
+        type: text
+    username:
+        label: Username
+        span: left
+        type: text
+    password:
+        label: Password
+        span: auto
+        type: password

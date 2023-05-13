@@ -1,0 +1,4 @@
+title: Ledger
+modelClass: Watchlearn\Company\Models\Ledger
+toolbar:
+    buttons: reorder_toolbar

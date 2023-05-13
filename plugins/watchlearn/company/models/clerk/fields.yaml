@@ -1,0 +1,23 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    wallet:
+        label: Wallet
+        span: auto
+        type: text
+    company:
+        label: Company
+        nameFrom: company_id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation
+    branch:
+        label: Branch
+        nameFrom: branch_id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation

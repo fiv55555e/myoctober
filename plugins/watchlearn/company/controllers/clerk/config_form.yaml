@@ -1,0 +1,10 @@
+name: Clerk
+form: $/watchlearn/company/models/clerk/fields.yaml
+modelClass: Watchlearn\Company\Models\Clerk
+defaultRedirect: watchlearn/company/clerk
+create:
+    redirect: 'watchlearn/company/clerk/update/:id'
+    redirectClose: watchlearn/company/clerk
+update:
+    redirect: watchlearn/company/clerk
+    redirectClose: watchlearn/company/clerk

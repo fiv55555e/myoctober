@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: Name
+        span: left
+        type: text
+    address:
+        label: Address
+        span: auto
+        type: text
+    company:
+        label: 所属公司
+        nameFrom: company_id
+        descriptionFrom: description
+        select: name
+        span: left
+        type: relation
